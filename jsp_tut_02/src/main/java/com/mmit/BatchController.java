@@ -25,7 +25,7 @@ public class BatchController extends HttpServlet{
 		String page_name = "";
 		if ("/batch".equals(action)) {
 			page_name = "/batch.jsp";
-		} else if ("/batch-add".equals(action)) {
+		} else if("/batch-add".equals(action)) {
 			page_name = "/batch.jsp";
 		}
 		getServletContext().getRequestDispatcher(page_name).forward(req, resp);

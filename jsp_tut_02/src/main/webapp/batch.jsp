@@ -17,8 +17,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-6 bg-warning">
-			<c:url var = "batch-add" value="/batch-add"></c:url>
-				<form action="${batch-add}" method="post" class="form col-5">
+				<form action="batch-add" method="post" class="form col-5">
 					<div class="mb-3">
 						<label for="" class="form-label"><span class="fst-italic fw-bold">B</span>atch <span class="fst-italic fw-bold">N</span>ame</label> <input
 							type="text" class="form-control" name="batch" required="required" />

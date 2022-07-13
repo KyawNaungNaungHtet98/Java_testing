@@ -34,7 +34,7 @@
 				<label for="" class="form-label">Batch</label>
 				<select name="batch" id="" class="form-select">
 				<% 
-				List<Batch> list = (ArrayList<Batch>) application.getAttribute("batches");
+				List<Batch> list = (ArrayList<Batch>) session.getAttribute("batches");
 				if(list==null) {
 					list = new ArrayList<Batch>();
 				}

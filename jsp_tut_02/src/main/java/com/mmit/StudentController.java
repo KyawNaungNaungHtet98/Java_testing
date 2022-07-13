@@ -22,19 +22,19 @@ public class StudentController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	@Override
-	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
-		super.init(config);
-		ServletContext context = config.getServletContext();
-		List<Batch> list = (ArrayList<Batch>) context.getAttribute("batches");
-		if (list == null) {
-			list = new ArrayList<Batch>();
-		}
-		list.add(new Batch("Batch1", LocalDate.parse("2022-07-12")));
-		list.add(new Batch("Batch2", LocalDate.parse("2022-08-01")));
-		context.setAttribute("batches", list);
-	}
+//	@Override
+//	public void init(ServletConfig config) throws ServletException {
+//		// TODO Auto-generated method stub
+//		super.init(config);
+//		ServletContext context = config.getServletContext();
+//		List<Batch> list = (ArrayList<Batch>) context.getAttribute("batches");
+//		if (list == null) {
+//			list = new ArrayList<Batch>();
+//		}
+//		list.add(new Batch("Batch1", LocalDate.parse("2022-07-12")));
+//		list.add(new Batch("Batch2", LocalDate.parse("2022-08-01")));
+//		context.setAttribute("batches", list);
+//	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -70,6 +70,7 @@ public class StudentController extends HttpServlet {
 		
 		HttpSession session = req.getSession(true);
 		
+	
 		List<Student> list = (ArrayList<Student>)session.getAttribute("students");
 		if(list == null) {
 			list = new ArrayList<Student>();
