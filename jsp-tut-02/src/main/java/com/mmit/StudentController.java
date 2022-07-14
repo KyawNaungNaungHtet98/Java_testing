@@ -22,22 +22,22 @@ public class StudentController extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 
-	@Override
-	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
-		super.init(config);
-		ServletContext context = config.getServletContext();
-		
-		List<Batch> list = (ArrayList<Batch>) context.getAttribute("batches");
-		if(list == null)
-			list = new ArrayList<Batch>();
-		
-		list.add(new Batch("Batch 1", LocalDate.parse("2022-07-12")));
-		list.add(new Batch("Batch 2", LocalDate.parse("2022-08-23")));
-		
-		context.setAttribute("batches", list);
-		
-	}
+//	@Override
+//	public void init(ServletConfig config) throws ServletException {
+//		// TODO Auto-generated method stub
+//		super.init(config);
+//		ServletContext context = config.getServletContext();
+//		
+//		List<Batch> list = (ArrayList<Batch>) context.getAttribute("batches");
+//		if(list == null)
+//			list = new ArrayList<Batch>();
+//		
+//		list.add(new Batch("Batch 1", LocalDate.parse("2022-07-12")));
+//		list.add(new Batch("Batch 2", LocalDate.parse("2022-08-23")));
+//		
+//		context.setAttribute("batches", list);
+//		
+//	}
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
