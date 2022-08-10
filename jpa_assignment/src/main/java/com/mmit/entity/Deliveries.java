@@ -2,6 +2,7 @@ package com.mmit.entity;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -24,6 +25,13 @@ public class Deliveries implements Serializable {
 	@Column(name = "delivery_date")
 	private LocalDate deliveryDate;
 	private boolean is_delivery;
+	
+	@OneToOne
+	@MapsId("id")
+	private Order order;
+	
+	
+	
 	public Deliveries() {
 		super();
 	}

@@ -12,6 +12,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import com.mmit.entity.Merchant;
+import com.mmit.entity.Users;
+
 class jpa_testing {
 	
 	static EntityManagerFactory emf;

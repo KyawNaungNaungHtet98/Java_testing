@@ -2,6 +2,7 @@ package com.mmit.entity;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -27,6 +28,15 @@ public class Order implements Serializable {
 	private double total_amount;
 	
 	private LocalDate order_date;
+	
+	@OneToOne
+	private Deliveries delivery;
+	
+	@ManyToOne
+	private Customer customer;
+	
+	@OneToMany(mappedBy = "orders")
+	private List<OrderItem> order_item;
 	
 	
 	public Order() {
