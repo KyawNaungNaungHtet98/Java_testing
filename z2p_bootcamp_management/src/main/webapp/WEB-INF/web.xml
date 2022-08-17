@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <description></description>
+    <display-name>LevelController</display-name>
+    <servlet-name>LevelController</servlet-name>
+    <servlet-class>mmit.z2p.controller.LevelController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LevelController</servlet-name>
+    <url-pattern>/LevelController</url-pattern>
+  </servlet-mapping>
+  <display-name>z2p_bootcamp_management</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
